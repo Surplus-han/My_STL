@@ -1,8 +1,15 @@
 #ifndef MYTINYSTL_ALLOCATOR_H_
 #define MYTINYSTL_ALLOCATOR_H_
 
-// 这个头文件包含一个模板类 allocator，用于管理内存的分配、释放，对象的构造、析构
-// #include "construct.h"
+/**
+ * @brief
+ * 实际上allocator 只是基层内存配置/释放行为，也就是::operate new 和 ::operator delete
+ * 一层薄薄的包装，并没有考虑效率上的优化
+ * 这个头文件包含一个模板类 allocator，用于管理内存的分配、释放，对象的构造、析构
+ * 
+ */
+
+#include "construct.h"
 // #include "util.h"
 namespace mystl
 {
